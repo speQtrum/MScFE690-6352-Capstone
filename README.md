@@ -8,27 +8,22 @@ This project explores the intersection of quantum computing, belief networks, an
 
 ## Key Features
 
-- Implementation of Quantum Belief Networks (QBNs) for financial modeling
-- Integration and preprocessing of Bitcoin price data and relevant market factors
+- Implementation of Quantum Belief Networks (QBNs) for Bitcoin's price movement forecasting
+- Integration and preprocessing of Bitcoin price data and relevant market factors/data
 - Development of a simple long-short trading strategy
 - Performance evaluation and backtesting framework
 
-## Installation
-
-[Include installation instructions here]
 
 ## Usage
 
-[Provide basic usage instructions and examples]
+
 
 ## Results
-
-[Briefly summarize key findings or performance metrics]
 
 
 ## License
 
-This project is licensed under the 
+This project is licensed under the ...
 
 ## Disclaimer
 
