@@ -1,6 +1,6 @@
 # MScFE690-6352-Capstone 2024
 WorldQuant University MScFE 690 Capstone Project 
-## Bitcoin Trading with Quantum Belief Network
+# Bitcoin Trading with Quantum Belief Network
 
 ## Project Overview
 
