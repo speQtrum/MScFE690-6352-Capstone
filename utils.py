@@ -1,11 +1,14 @@
 import numpy as np
 from math import asin, sqrt
 from math import floor
-from qiskit.circuit import QuantumCircuit
+from qiskit.circuit import QuantumCircuit, QuantumRegister
 from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
 from qiskit_ibm_runtime import QiskitRuntimeService, Session, Sampler, Options
 from qiskit_ibm_runtime import SamplerV2 
-
+from qiskit.quantum_info import Statevector
+from qiskit.visualization import plot_bloch_multivector
+import matplotlib.pyplot as plt
+# %matplotlib inline
 # silence warnings
 # import warnings
 # warnings.filterwarnings('ignore')
@@ -60,11 +63,11 @@ def feature_map(x,method = 'default'):
             theta = 0    
         else:
             theta = x
-    elif method == 'shift':
-        if x > np.pi/2:
-            theta = x + np.pi/4 + (x - np.pi/2)
-        elif x < np.pi/2:
-            theta = x - np.pi/4 - (np.pi/2 - x)
+    elif method == 'shifted':
+        if x < np.pi/2:
+            theta = (np.pi/4)-(x/4)
+        elif x > np.pi/2:
+            theta = (3*np.pi/4)+(x/4)
         else:
             theta = x
     elif method == 'default':
@@ -72,14 +75,19 @@ def feature_map(x,method = 'default'):
     return theta
 
 
-def encode_data(data_row,method='default'): # Encoding angle data to quantum circuit Ry gates
-    qc= QuantumCircuit([]) #,cr)
+def encode_data(data_row,show_bloch_sphere=False): # Encoding angle data to quantum circuit Ry gates
 
     quantum_data = QuantumCircuit(data_row.shape[0],)
     for j in range(len(data_row)):
-        quantum_data.ry(feature_map(data_row[j],method=method),j)
+        quantum_data.ry(data_row[j],j)
 
-    quantum_data.barrier()
+    if show_bloch_sphere == True:
+        plt.figure()
+        plot_bloch_multivector(Statevector(quantum_data))
+        plt.show()
+    else:
+        pass
+
     return quantum_data
 
 
