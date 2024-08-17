@@ -23,7 +23,7 @@ This project explores the intersection of quantum computing, belief networks, an
 
 ## License
 
-This project is licensed under the ...
+This project is licensed under the MIT license.
 
 ## Disclaimer
 
