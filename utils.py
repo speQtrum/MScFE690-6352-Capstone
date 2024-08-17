@@ -7,6 +7,8 @@ from qiskit_ibm_runtime import QiskitRuntimeService, Session, Sampler, Options
 from qiskit_ibm_runtime import SamplerV2 
 from qiskit.quantum_info import Statevector
 from qiskit.visualization import plot_bloch_multivector
+from qiskit_aer import AerSimulator
+
 import matplotlib.pyplot as plt
 # %matplotlib inline
 # silence warnings
@@ -38,7 +40,7 @@ def bit_str_2_arr(bitstring):
     my_state = bitstring[::-1]
     bit_array = np.zeros(len(my_state))
     for i in range(len(my_state)):
-    	if int(my_state[i]) == 0:
+        if int(my_state[i]) == 0:
             pass
         else:
             bit_array[i] = int(my_state[i])
@@ -273,7 +275,10 @@ def quantum_compute(service,circuit,backend,sampler,
 
     elif sampler == 'v2':
         sampler = SamplerV2(mode=backend)
-        sampler.options.simulator.seed_simulator = seed
+        if backend == AerSimulator():
+            sampler.options.simulator.seed_simulator = seed
+        else:
+            pass
         
         job = sampler.run([isa_circuit],shots=num_shots)
         result = job.result()
