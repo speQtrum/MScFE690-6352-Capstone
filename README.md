@@ -1,7 +1,7 @@
 # MScFE690-6352-Capstone 2024
 WorldQuant University MScFE 690 Capstone Project 
 # Bitcoin Trading with Quantum Belief Network
-
+![alt text](https://github.com/speQtrum/MScFE690-6352-Capstone/blob/main/images/QBN%20preview.png)
 ## Project Overview
 
 This project explores the intersection of quantum computing, belief networks, and Bitcoin trading to develop an innovative long-short trading strategy. By leveraging the strengths of quantum computing and probabilistic graphical models, we aim to exploit the complexities of the Bitcoin market more effectively than traditional approaches.
