@@ -5,7 +5,7 @@ WorldQuant University MScFE 690 Capstone Project
 ## Project Overview
 
 This project explores the intersection of quantum computing, belief networks, and Bitcoin trading to develop an innovative long-short trading strategy. By leveraging the strengths of quantum computing and probabilistic graphical models, we aim to exploit the complexities of the Bitcoin market more effectively than traditional approaches.
-![alt text]([http://url/to/img.png](https://github.com/speQtrum/MScFE690-6352-Capstone/blob/main/images/Drawing.png))
+![alt text]([https://github.com/speQtrum/MScFE690-6352-Capstone/blob/main/images/Drawing.png]
 
 ## Key Features
 
