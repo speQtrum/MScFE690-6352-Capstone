@@ -21,6 +21,7 @@ To install project dependencies paste **pip install -r requirements.txt**
 
 ## Results
 
+![alt text](https://github.com/speQtrum/MScFE690-6352-Capstone/blob/main/images/performance.png)
 
 ## License
 
