@@ -15,7 +15,7 @@ This project explores the intersection of quantum computing, belief networks, an
 
 
 ## Usage
-
+To install project dependencies paste **pip install -r requirements.txt**
 
 
 ## Results
